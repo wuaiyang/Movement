@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script type="text/javascript" src="startMovetime.js"></script>
+	<style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			left: 200px;
+			top:200px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function(){
+			var oDiv = document.getElementById("div1");
+			oDiv.onmouseover = function(){
+				startMove(this,{width:200,height:200, left:150,top:150},200,'linear',function(){});
+			};
+			oDiv.onmouseout = function(){
+				startMove(this,{width:100,height:100, left:200,top:200},200,'linear',function(){});
+			};
+
+		};
+
+		
+	</script>
+</head>
+<body>s
+	<div id="div1"></div>
+</body>
+</html>
